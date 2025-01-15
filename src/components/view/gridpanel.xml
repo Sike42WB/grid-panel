@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+
+<!--********** Copyright 2016 Roku Corp.  All Rights Reserved. **********-->
+
+<component name = "GridPanelExample" extends = "GridPanel" initialFocus = "examplePosterGrid" >
+
+<script type="text/brightscript" uri="gridpanel.brs" />
+
+  <children >
+
+    <PosterGrid 
+      id = "examplePosterGrid" 
+      basePosterSize = "[ 512, 288 ]" 
+      caption1NumLines = "1" 
+      numColumns = "2" 
+      numRows = "2" 
+      itemSpacing = "[ 20, 20 ]" />
+
+  </children>
+
+</component>
