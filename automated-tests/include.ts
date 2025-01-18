@@ -7,7 +7,7 @@ exports.mochaHooks = {
         console.log('deploying app');
         await device.deploy(
             {
-                rootDir: "./build/src/",
+                rootDir: "./src/",
                 files: ["**/*"]
             }
         );

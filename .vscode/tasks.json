@@ -2,9 +2,44 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "build",
+            "label": "test",
             "script": "build",
             "type": "npm"
+        },
+        {
+            "label": "build",
+            "type": "shell",
+            "command": "roku",
+            "args": [
+                "-ls",
+                "release",
+                "-p",
+                "${workspaceFolder}/src/",
+                "-O",
+                "out"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [],
+            "detail": "Builds the Roku"
+        },
+        {
+            "type": "npm",
+            "script": "install",
+            "group": "clean",
+            "problemMatcher": [],
+            "label": "npm: install",
+            "detail": "install dependencies from package"
+        },
+        {
+            "type": "npm",
+            "script": "test",
+            "group": "test",
+            "problemMatcher": [],
+            "label": "npm: test",
+            "detail": "mocha -r ts-node/register automated-tests/**/*.ts"
         }
     ]
 }

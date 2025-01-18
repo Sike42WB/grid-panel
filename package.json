@@ -1,70 +1,35 @@
 {
-
-  "scripts": {
-
-    "start": "react-scripts start",
-
-    "build": "react-scripts build",
-
-    "test": "react-scripts test",
-
-    "eject": "react-scripts eject",
-
-    "test:watch": "react-scripts test --watchAll",
-
-    "test:coverage": "react-scripts test --coverage",
-
-    "lint": "eslint src --ext .js,.jsx,.ts,.tsx",
-
-    "fix": "eslint src --ext .js,.jsx,.ts,.tsx --fix",
-
-    "prebuild": "npm run lint",
-
-    "build:prod": "npm run build && npm run test:coverage",
-
-    "setup:rt": "npm install roku-test-automation --save-dev",
-
-    "test:rt": "node test/rt-setup.js",
-
-    "build:rt": "npm run build && npm run test:rt"
-
-  },
-
-  "dependencies": {
-
-    "roku-test-automation": "^1.0.52"
-
-  },
-
-  "mocha": {
-
-    "timeout": 120000,
-
-    "require": [
-
-      "ts-node/register",
-
-      "./automated-tests/include.ts"
-
-    ]
-
-  },
-
+  "name": "grid-panel",
+  "version": "0.0.1",
+  "description": "Grid Panel MVVM Refactor",
   "devDependencies": {
-
     "@types/chai": "^5.0.1",
-
     "@types/mocha": "^10.0.10",
-
     "chai": "^5.1.2",
-
     "eslint": "^9.18.0",
-
     "mocha": "^11.0.1",
-
-    "ts-node": "^10.9.2"
-
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.3"
+  },
+  "engines": {
+    "node": "22.12.0"
+  },
+  "scripts": {
+    "test": "mocha -r ts-node/register automated-tests/**/*.ts",
+    "build": "npm run build"
+  },
+  "dependencies": {
+    "chai": "^5.1.2",
+    "eslint": "^9.18.0",
+    "isarray": "^2.0.5",
+    "mocha": "^11.0.1",
+    "roku-test-automation": "^1.0.52"
+  },
+  "mocha": {
+    "timeout": 120000,
+    "require": [
+      "ts-node/register",
+      "./automated-tests/include.ts"
+    ]
   }
-
 }
-
