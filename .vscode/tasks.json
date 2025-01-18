@@ -4,26 +4,19 @@
         {
             "label": "test",
             "script": "build",
-            "type": "npm"
+            "type": "npm",
+            "dependsOn": [
+                "prebuild"
+            ]
         },
         {
-            "label": "build",
-            "type": "shell",
-            "command": "roku",
-            "args": [
-                "-ls",
-                "release",
-                "-p",
-                "${workspaceFolder}/src/",
-                "-O",
-                "out"
+            "label": "build-dev",
+            "type": "typescript",
+            "tsconfig": "tsconfig.json",
+            "problemMatcher": [
+                "$tsc"
             ],
-            "group": {
-                "kind": "build",
-                "isDefault": true
-            },
-            "problemMatcher": [],
-            "detail": "Builds the Roku"
+            "group": "build"
         },
         {
             "type": "npm",
