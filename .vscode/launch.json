@@ -1,27 +1,24 @@
 {
-
     "configurations": [
-    {
-        "name": "BrightScript Debug: Launch",
-        "type": "brightscript",
-        "request": "launch",
-        "host": "192.168.0.242",
-        "password": "Sike1234",
-        "rootDir": "${workspaceFolder}/src"
-    },
-    {
-
-        "name": "Run Automated Tests",
-        "type": "node",
-        "request": "launch",
-        "cwd": "${workspaceFolder}",
-        "preLaunchTask": "build",
-        "program": "${workspaceFolder}/node_modules/mocha/bin/_mocha",
-        "args": [
-            "./automated-tests/**/*.ts",
-        ],
-        "console": "integratedTerminal"
-    }
+        {
+            "name": "BrightScript Debug: Launch",
+            "type": "brightscript",
+            "request": "launch",
+            "host": "192.168.0.242",
+            "password": "Sike1234",
+            "rootDir": "${workspaceFolder}/src"
+        },
+        {
+            "name": "Run Automated Tests",
+            "type": "node",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/node_modules/mocha/bin/_mocha",
+            "args": [
+                "./automated-tests/**/*.ts",
+            ],
+            "console": "integratedTerminal"
+        }
     ],
-
 }
