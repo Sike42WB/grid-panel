@@ -1,0 +1,10 @@
+{
+    "files.associations": {
+        "**/local/**/*.ts": "xml"
+    },
+    "brightscript.output.clearConsoleOnChannelStart": false,
+    "brightscript.bsdk": "node_modules/brighterscript",
+    "editor.formatOnSave": true,
+    "xml.format.maxLineWidth":0,
+    "svelte.enable-ts-plugin": true
+}
