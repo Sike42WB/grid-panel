@@ -2,9 +2,18 @@
     "files.associations": {
         "**/local/**/*.ts": "xml"
     },
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true
+    },
+    "brighterscript.bsdk": "./node_modules/brighterscript",
     "brightscript.output.clearConsoleOnChannelStart": false,
     "brightscript.bsdk": "node_modules/brighterscript",
     "editor.formatOnSave": true,
-    "xml.format.maxLineWidth":0,
+    "xml.format.maxLineWidth": 0,
     "svelte.enable-ts-plugin": true
 }

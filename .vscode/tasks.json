@@ -2,6 +2,11 @@
     "version": "2.0.0",
     "tasks": [
         {
+            "label": "build",
+            "type": "shell",
+            "command": "npx bsc"
+        },
+        {
             "label": "test",
             "script": "build",
             "type": "npm",
@@ -21,7 +26,7 @@
         {
             "type": "npm",
             "script": "install",
-            "group": "clean",
+            "group": "test",
             "problemMatcher": [],
             "label": "npm: install",
             "detail": "install dependencies from package"
