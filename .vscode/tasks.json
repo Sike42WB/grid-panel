@@ -2,12 +2,9 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "test",
-            "script": "build",
-            "type": "npm",
-            "dependsOn": [
-                "prebuild"
-            ]
+            "label": "build",
+            "type": "shell",
+            "command": "npx bsc"
         },
         {
             "label": "build-dev",
@@ -20,19 +17,19 @@
         },
         {
             "type": "npm",
-            "script": "install",
-            "group": "clean",
-            "problemMatcher": [],
-            "label": "npm: install",
-            "detail": "install dependencies from package"
-        },
-        {
-            "type": "npm",
             "script": "test",
             "group": "test",
             "problemMatcher": [],
             "label": "npm: test",
             "detail": "mocha -r ts-node/register automated-tests/**/*.ts"
-        }
+        },
+        {
+            "label": "test",
+            "script": "build",
+            "type": "npm",
+            "dependsOn": [
+                "prebuild"
+            ]
+        },
     ]
 }

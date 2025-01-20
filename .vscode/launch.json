@@ -4,9 +4,10 @@
             "name": "BrightScript Debug: Launch",
             "type": "brightscript",
             "request": "launch",
-            "host": "192.168.0.242",
+            "host": "192.168.0.241",
             "password": "Sike1234",
-            "rootDir": "${workspaceFolder}/src"
+            "rootDir": "${workspaceFolder}/dist",
+            "preLaunchTask": "build"
         },
         {
             "name": "Run Automated Tests",
