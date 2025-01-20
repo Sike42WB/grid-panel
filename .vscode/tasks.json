@@ -7,14 +7,6 @@
             "command": "npx bsc"
         },
         {
-            "label": "test",
-            "script": "build",
-            "type": "npm",
-            "dependsOn": [
-                "prebuild"
-            ]
-        },
-        {
             "label": "build-dev",
             "type": "typescript",
             "tsconfig": "tsconfig.json",
@@ -22,6 +14,22 @@
                 "$tsc"
             ],
             "group": "build"
-        }
+        },
+        {
+            "type": "npm",
+            "script": "test",
+            "group": "test",
+            "problemMatcher": [],
+            "label": "npm: test",
+            "detail": "mocha -r ts-node/register automated-tests/**/*.ts"
+        },
+        {
+            "label": "test",
+            "script": "build",
+            "type": "npm",
+            "dependsOn": [
+                "prebuild"
+            ]
+        },
     ]
 }
